@@ -9,7 +9,9 @@ gunzip dm3.fa.gz
 
 #create index
 cd ~/Applications/ncbi-blast-2.10.1+/blastdb
-../bin/makeblastdb -in ../sequences/dm3.fa -dbtype nucl
+../bin/makeblastdb -in ../sequences/dm3.fa -dbtype nucl -out dm3
+cd ..
+
 
 
 
