@@ -23,6 +23,7 @@ cat zfh1_genome-wide_eTSS.txt | while read l; do
 
 done | gzip -c > zfh1_genome-wide_eTSS_seq.txt.gz
 
+
 #download other sequences
 for i in random zfh1_2 zfh1_3 zfh1_4; do
   cat positions_${i}.txt | while read l; do
