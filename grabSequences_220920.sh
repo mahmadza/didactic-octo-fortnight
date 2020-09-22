@@ -4,7 +4,7 @@
 cd ~/Documents/GitHub/didactic-octo-fortnight
 
 #grab sequences
-export BLASTDB=~/Applications/ncbi-blast-2.10.1+/blastdb/dm3
+export BLASTDB=~/Applications/ncbi-blast-2.10.1+/blastdb
 
 width=50
 
@@ -21,7 +21,7 @@ cat zfh1_genome-wide_eTSS.txt | while read l; do
 
   echo -en $chr"\t"$start"\t"$end"\t"$tss"\t"$(echo $l | awk '{print $5}')"\t"$seq"\n"
 
-done | gzip -c > zfh1_genome-wide_eTSS_seq.txt
+done | gzip -c > zfh1_genome-wide_eTSS_seq.txt.gz
 
 #download other sequences
 for i in random zfh1_2 zfh1_3 zfh1_4; do
@@ -37,7 +37,7 @@ for i in random zfh1_2 zfh1_3 zfh1_4; do
 
     echo -en $chr"\t"$start"\t"$end"\t"$tss"\t"$(echo $l | awk '{print $5}')"\t"$seq"\n"
 
-  done | gzip -c > positons_${i}_seq.txt
+  done | gzip -c > positons_${i}_seq.txt.gz &
 done
 
 
