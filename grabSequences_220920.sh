@@ -36,7 +36,7 @@ awk 'NR>1' plus_1_pos.txt | while read l; do
 
   echo -en $chr"\t"$start"\t"$end"\t"$tss"\t"$respnss"\t"$(echo $l | awk '{print $5}')"\t"$seq"\n"
 
-done | gzip -c > zfh1_genome-wide_eTSS_seq.txt.gz
+done | gzip -c > plus_1_pos_seq.txt.gz
 
 
 
