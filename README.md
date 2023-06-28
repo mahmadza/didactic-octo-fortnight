@@ -1,2 +1,2 @@
 # didactic-octo-fortnight
-Reanalysis of STAP-seq, now using Python!
+Reanalysis of STAP-seq data.
